@@ -18,20 +18,26 @@ The primary goal of these documents is to provide a clear, consistent, and maint
 
 This directory contains detailed documentation on various aspects of our architecture and development practices.
 
-### [Architectural Patterns](architectural_patterns.md)
+#### [Architectural Patterns](architectural_patterns.md)
+*<small>https://github.com/your-username/your-repo/blob/main/architecture/architectural_patterns.md</small>*
 Preferred high-level architectural patterns (e.g., microservices, serverless) and code structuring approaches.
 
-### [Coding Style](coding_style.md)
+#### [Coding Style](coding_style.md)
+*<small>https://github.com/your-username/your-repo/blob/main/architecture/coding_style.md</small>*
 Guidelines for code formatting, linting, naming conventions, and commenting.
 
-### [Deployment](deployment.md)
+#### [Deployment](deployment.md)
+*<small>https://github.com/your-username/your-repo/blob/main/architecture/deployment.md</small>*
 Standards for CI/CD, infrastructure management (IaC), deployment targets, and monitoring.
 
-### [Languages and Frameworks](languages_frameworks.md)
+#### [Languages and Frameworks](languages_frameworks.md)
+*<small>https://github.com/your-username/your-repo/blob/main/architecture/languages_frameworks.md</small>*
 Preferred programming languages, frameworks, databases, and other core technologies.
 
-### [Security](security.md)
+#### [Security](security.md)
+*<small>https://github.com/your-username/your-repo/blob/main/architecture/security.md</small>*
 Requirements for authentication, authorization, secrets management, encryption, and secure coding practices.
 
-### [Testing Strategy](testing_strategy.md)
+#### [Testing Strategy](testing_strategy.md)
+*<small>https://github.com/your-username/your-repo/blob/main/architecture/testing_strategy.md</small>*
 Approach to unit, integration, and E2E testing, including preferred tools and coverage expectations.
