@@ -19,25 +19,25 @@ The primary goal of these documents is to provide a clear, consistent, and maint
 This directory contains detailed documentation on various aspects of our architecture and development practices.
 
 #### [Architectural Patterns](architectural_patterns.md)
-*<small>https://github.com/your-username/your-repo/blob/main/architecture/architectural_patterns.md</small>*
+*<small>https://flintory5.github.io/library/architecture/architectural_patterns.html</small>*
 Preferred high-level architectural patterns (e.g., microservices, serverless) and code structuring approaches.
 
 #### [Coding Style](coding_style.md)
-*<small>https://github.com/your-username/your-repo/blob/main/architecture/coding_style.md</small>*
+*<small>https://flintory5.github.io/library/architecture/coding_style.html</small>*
 Guidelines for code formatting, linting, naming conventions, and commenting.
 
 #### [Deployment](deployment.md)
-*<small>https://github.com/your-username/your-repo/blob/main/architecture/deployment.md</small>*
+*<small>https://flintory5.github.io/library/architecture/deployment.html</small>*
 Standards for CI/CD, infrastructure management (IaC), deployment targets, and monitoring.
 
 #### [Languages and Frameworks](languages_frameworks.md)
-*<small>https://github.com/your-username/your-repo/blob/main/architecture/languages_frameworks.md</small>*
+*<small>https://flintory5.github.io/library/architecture/languages_frameworks.html</small>*
 Preferred programming languages, frameworks, databases, and other core technologies.
 
 #### [Security](security.md)
-*<small>https://github.com/your-username/your-repo/blob/main/architecture/security.md</small>*
+*<small>https://flintory5.github.io/library/architecture/security.html</small>*
 Requirements for authentication, authorization, secrets management, encryption, and secure coding practices.
 
 #### [Testing Strategy](testing_strategy.md)
-*<small>https://github.com/your-username/your-repo/blob/main/architecture/testing_strategy.md</small>*
+*<small>https://flintory5.github.io/library/architecture/testing_strategy.html</small>*
 Approach to unit, integration, and E2E testing, including preferred tools and coverage expectations.
