@@ -16,9 +16,22 @@ The primary goal of these documents is to provide a clear, consistent, and maint
 
 ## Contents
 
-*   **`languages_frameworks.md`:** Preferred programming languages, frameworks, databases, and other core technologies.
-*   **`coding_style.md`:** Guidelines for code formatting, linting, naming conventions, and commenting.
-*   **`architectural_patterns.md`:** Preferred high-level architectural patterns (e.g., microservices, serverless) and code structuring approaches.
-*   **`testing_strategy.md`:** Approach to unit, integration, and E2E testing, including preferred tools and coverage expectations.
-*   **`deployment.md`:** Standards for CI/CD, infrastructure management (IaC), deployment targets, and monitoring.
-*   **`security.md`:** Requirements for authentication, authorization, secrets management, encryption, and secure coding practices.
+This directory contains detailed documentation on various aspects of our architecture and development practices.
+
+### [Architectural Patterns](architectural_patterns.md)
+Preferred high-level architectural patterns (e.g., microservices, serverless) and code structuring approaches.
+
+### [Coding Style](coding_style.md)
+Guidelines for code formatting, linting, naming conventions, and commenting.
+
+### [Deployment](deployment.md)
+Standards for CI/CD, infrastructure management (IaC), deployment targets, and monitoring.
+
+### [Languages and Frameworks](languages_frameworks.md)
+Preferred programming languages, frameworks, databases, and other core technologies.
+
+### [Security](security.md)
+Requirements for authentication, authorization, secrets management, encryption, and secure coding practices.
+
+### [Testing Strategy](testing_strategy.md)
+Approach to unit, integration, and E2E testing, including preferred tools and coverage expectations.
