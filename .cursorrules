@@ -169,8 +169,11 @@
             "documentation": "required"
           },
           "coverage": {
-            "minimum": 85,
+            "minimum": 90,
             "focus": ["critical-paths", "complex-logic"]
+          },
+          "mutation": {
+            "minimum_score": 80
           }
         }
       },
