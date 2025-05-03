@@ -1,0 +1,210 @@
+{
+  "version": "1.0",
+  "name": "Architecture Standards Enforcement",
+  "description": "Enforces architectural standards and best practices across projects",
+  
+  "rules": {
+    "architecture": {
+      "patterns": {
+        "enforce": ["microservices", "serverless", "event-driven", "mvc"],
+        "discourage": ["monoliths"],
+        "layers": {
+          "required": ["presentation", "application", "domain", "infrastructure"],
+          "enforce_separation": true
+        }
+      },
+      "frontend_state": {
+        "react": {
+          "preferred": ["context-api", "zustand", "redux-toolkit"],
+          "discourage": ["redux", "mobx"]
+        },
+        "vue": {
+          "preferred": ["pinia"],
+          "discourage": ["vuex"]
+        }
+      }
+    },
+    
+    "coding_style": {
+      "formatting": {
+        "typescript": {
+          "formatter": "prettier",
+          "linter": "eslint",
+          "rulesets": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "eslint-config-prettier"]
+        },
+        "python": {
+          "formatter": "black",
+          "linter": "flake8"
+        }
+      },
+      "naming": {
+        "variables_functions": {
+          "typescript": "camelCase",
+          "python": "snake_case"
+        },
+        "classes_types": {
+          "all": "PascalCase"
+        },
+        "constants": {
+          "all": "UPPER_SNAKE_CASE"
+        }
+      },
+      "documentation": {
+        "typescript": {
+          "exported": "tsdoc",
+          "inline": "//"
+        },
+        "python": {
+          "docstrings": "standard",
+          "inline": "#"
+        }
+      }
+    },
+    
+    "deployment": {
+      "ci_cd": {
+        "preferred": ["github-actions", "gitlab-ci"],
+        "required_steps": ["test", "build", "deploy"]
+      },
+      "targets": {
+        "preferred": ["aws-lambda", "aws-ecs"],
+        "secondary": ["aws-eks"]
+      },
+      "strategies": {
+        "default": "blue-green",
+        "alternatives": ["canary", "rolling"]
+      },
+      "infrastructure": {
+        "preferred": ["terraform", "aws-cloudformation"],
+        "fallback": ["pulumi"],
+        "discourage": ["manual"]
+      }
+    },
+    
+    "languages_frameworks": {
+      "backend": {
+        "primary": ["typescript", "nodejs"],
+        "secondary": ["javascript", "nodejs"],
+        "fallback": ["python"],
+        "frameworks": {
+          "nodejs": ["express"],
+          "python": ["flask"]
+        }
+      },
+      "frontend": {
+        "primary": ["typescript"],
+        "secondary": ["javascript"],
+        "frameworks": {
+          "preferred": ["nextjs"],
+          "secondary": ["vuejs"],
+          "tertiary": ["react"]
+        }
+      },
+      "databases": {
+        "relational": {
+          "preferred": ["postgresql", "aws-aurora"]
+        },
+        "non-relational": {
+          "preferred": ["aws-dynamodb"]
+        },
+        "graph": {
+          "preferred": ["neo4j"]
+        }
+      },
+      "other": {
+        "message_queues": ["aws-sqs"],
+        "caching": ["redis"],
+        "cloud": ["aws"],
+        "containers": {
+          "preferred": ["aws-ecs"],
+          "secondary": ["aws-eks"]
+        },
+        "api": {
+          "preferred": ["graphql"],
+          "secondary": ["rest"]
+        }
+      }
+    },
+    
+    "security": {
+      "auth": {
+        "preferred": ["oauth2", "oidc"],
+        "providers": ["auth0", "aws-cognito"],
+        "tokens": {
+          "jwt": {
+            "require": ["short-expiry", "secure-signing", "refresh-tokens"]
+          }
+        }
+      },
+      "secrets": {
+        "preferred": ["doppler"],
+        "discourage": ["source-control", "plaintext-env"]
+      },
+      "encryption": {
+        "transit": {
+          "require": "tls1.2+"
+        },
+        "rest": {
+          "preferred": "built-in-db-encryption",
+          "alternatives": ["application-level", "kms"]
+        }
+      },
+      "scanning": {
+        "require": ["sast", "sca"],
+        "optional": ["dast"],
+        "secrets": "required"
+      },
+      "api": {
+        "require": ["https", "rate-limiting", "input-validation"]
+      }
+    },
+    
+    "testing": {
+      "principles": {
+        "enforce": ["test-pyramid", "tdd"],
+        "tdd": {
+          "require": ["write-tests-first", "red-green-refactor"],
+          "workflow": {
+            "steps": ["write-test", "run-test", "write-code", "refactor"],
+            "documentation": "required"
+          },
+          "coverage": {
+            "minimum": 85,
+            "focus": ["critical-paths", "complex-logic"]
+          }
+        }
+      },
+      "types": {
+        "unit": {
+          "preferred": ["mocha", "jest", "pytest"],
+          "dependencies": "mock"
+        },
+        "integration": {
+          "preferred": ["mocha", "pytest"],
+          "dependencies": ["mock", "test-containers"]
+        },
+        "e2e": {
+          "preferred": ["playwright"],
+          "scope": "minimal"
+        }
+      },
+      "structure": {
+        "location": ["tests", "__tests__"],
+        "naming": {
+          "typescript": ["*.test.ts", "*.spec.ts"],
+          "python": ["test_*.py"]
+        }
+      }
+    }
+  },
+  
+  "enforcement": {
+    "severity": {
+      "preferred": "warning",
+      "required": "error",
+      "discouraged": "warning"
+    },
+    "auto_fix": true,
+    "suggestions": true
+  }
+} 
